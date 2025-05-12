@@ -1,60 +1,55 @@
 ---
 layout: base.liquid
-title: Blog
-permalink: /blog/index.html
-eleventyImport:
-  collections: ["posts"]
+title: Blog - Hashim Warren
+permalink: /blog/
+description: "Read the latest insights on marketing strategy, digital trends, and community building from Hashim Warren."
 ---
 
-<div class="container mt-4">
-  <header class="py-5 text-center">
-    <h1 class="fw-light">Latest Insights</h1>
-    <p class="lead text-muted">Thoughts and updates on marketing strategy and local business growth.</p>
+<div class="container mt-5">
+  <header class="text-center mb-5">
+    <h1 class="display-4">Blog</h1>
+    <p class="lead text-muted">Insights on marketing strategy, digital trends, and community building.</p>
   </header>
 
-  <section class="py-3">
-    <div class="row g-4">
-      {%- if collections.posts and collections.posts.length > 0 -%}
-        {%- for post in collections.posts | reverse -%}
+  <div class="row g-4">
+    {%- if collections.posts and collections.posts.length > 0 -%}
+      {%- for post in collections.posts | reverse -%}
           <div class="col-md-4">
-            <div class="card h-100">
-              {% if post.data.image %}
-                <img src="{{ post.data.image }}" class="card-img-top card-img-top-fixed-height" alt="{{ post.data.imageAlt | default: 'Blog post image' }}">
+            <div class="card h-100 border-0 shadow-sm bg-white">
+               {% if post.data.featuredImage %}
+              <img src="{{ post.data.featuredImage }}" class="card-img-top card-img-top-fixed-height" alt="{{ post.data.imageAlt | default: 'Blog post image' }}">
               {% else %}
-                <img src="https://placehold.co/600x400.png?text={{ post.data.title | default: 'Blog Post Image' | replace: ' ', '+' }}" class="card-img-top card-img-top-fixed-height" alt="Placeholder for {{ post.data.title }}">
+              <img src="https://placehold.co/600x400.png?text={{post.data.title | replace: ' ', '+'}}" class="card-img-top card-img-top-fixed-height" alt="Placeholder image for {{post.data.title}}">
               {% endif %}
-              <div class="card-body text-center">
-                <p class="text-muted text-uppercase small mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
-                <h5 class="card-title text-uppercase">{{ post.data.title | default: "Blog Post Title" }}</h5>
-                {% if post.data.summary %}
-                  <p class="card-text text-start">{{ post.data.summary }}</p>
-                {% endif %}
-                <a href="{{ post.url | url }}" class="btn btn-sm btn-outline-secondary">Read More</a>
+              <div class="card-body text-center d-flex flex-column">
+                {% if post.data.date %}<p class="text-muted text-uppercase small mb-2">{{ post.date | date: "%B %d, %Y" }}</p>{% endif %}
+                <h5 class="card-title text-uppercase">{{ post.data.title }}</h5>
+                {% if post.data.summary %}<p class="card-text text-start">{{ post.data.summary }}</p>{% endif %}
+                <a href="{{ post.url | url }}" class="btn btn-sm btn-outline-secondary mt-auto">Read More</a>
               </div>
             </div>
           </div>
         {%- endfor -%}
       {%- else -%}
-        <div class="col">
-          <p class="text-center text-muted">Blog posts will be listed here soon.</p>
-          <!-- Placeholder cards if no collection exists or is empty -->
-          <div class="row g-4">
+        <div class="col-12">
+          <p class="text-center">No blog posts yet. Stay tuned!</p>
+          <!-- Placeholder cards if needed for layout testing when no posts exist -->
+          <div class="row g-4 visually-hidden">
             {% for i in (1..3) %}
             <div class="col-md-4">
-              <div class="card h-100">
-                <img src="https://placehold.co/600x400.png?text=Blog+Post+{{ i }}" class="card-img-top card-img-top-fixed-height" alt="Placeholder Blog Post Image {{ i }}">
-                <div class="card-body text-center">
-                  <p class="text-muted text-uppercase small mb-2">MAY {{ 12 | minus: i }}, 2025</p>
-                  <h5 class="card-title text-uppercase">Blog Post Title {{ i }}</h5>
+              <div class="card h-100 border-0 shadow-sm bg-white">
+                <img src="https://placehold.co/600x400.png?text=Blog+Post+{{i}}" class="card-img-top card-img-top-fixed-height" alt="Placeholder Blog Post Image {{i}}">
+                <div class="card-body text-center d-flex flex-column">
+                  <p class="text-muted text-uppercase small mb-2">MAY {{ 15 | minus: i }}, 2025</p>
+                  <h5 class="card-title text-uppercase">POST TITLE {{i}}</h5>
                   <p class="card-text text-start">This is a summary of the blog post, providing a natural lead-in to the full content.</p>
-                  <a href="#" class="btn btn-sm btn-outline-secondary">Read More</a>
+                  <a href="#" class="btn btn-sm btn-outline-secondary mt-auto">Read More</a>
                 </div>
               </div>
             </div>
             {% endfor %}
           </div>
         </div>
-      {%- endif -%}
-    </div>
-  </section>
+    {%- endif -%}
+  </div>
 </div>

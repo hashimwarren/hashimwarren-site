@@ -328,7 +328,7 @@
       "description": "Build a page showcasing speaking engagements, talks, and workshops.",
       "test": "Verify speaking engagements display correctly with dates, titles, and venues.",
       "difficulty": 2,
-      "completed": false
+      "completed": true
     },
     {
       "id": "10.2",
@@ -344,7 +344,8 @@
       "description": "Set up the data structure for blog posts and projects, either as Markdown files or JSON data.",
       "test": "Verify that content can be added and displays correctly throughout the site.",
       "difficulty": 4,
-      "completed": false
+      "completed": false,
+      "status": "skipped"
     },
     {
       "id": "11.2",
@@ -393,6 +394,80 @@
       "test": "Verify the site is accessible at the custom domain with HTTPS.",
       "difficulty": 2,
       "completed": false
+    },
+    {
+      "id": "11",
+      "task": "Implement Forms",
+      "status": "in-progress",
+      "subTasks": [
+        {
+          "id": "11.1",
+          "task": "Add newsletter signup form (e.g., in footer or dedicated section)",
+          "status": "skipped"
+        },
+        {
+          "id": "11.2",
+          "task": "Verify Netlify Forms integration for contact form",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "task": "SEO, Performance, and Accessibility Enhancements",
+      "status": "in-progress",
+      "subTasks": [
+        {
+          "id": "12.1",
+          "task": "Add basic SEO meta tags (title, description, canonical, OG, Twitter) to base layout",
+          "status": "complete"
+        },
+        {
+          "id": "12.2",
+          "task": "Add basic accessibility improvements (skip link, ARIA roles) to base layout",
+          "status": "complete"
+        },
+        {
+          "id": "12.3",
+          "task": "Add SRI attributes to CDN links",
+          "status": "complete"
+        },
+        {
+          "id": "12.4",
+          "task": "Ensure all images have descriptive alt text",
+          "status": "pending"
+        },
+        {
+          "id": "12.5",
+          "task": "Optimize images for web",
+          "status": "pending"
+        },
+        {
+          "id": "12.6",
+          "task": "Create robots.txt file",
+          "status": "complete"
+        },
+        {
+          "id": "12.7",
+          "task": "Generate sitemap.xml (e.g., using @11ty/eleventy-plugin-sitemap)",
+          "status": "complete"
+        },
+        {
+          "id": "12.8",
+          "task": "Perform Lighthouse audit and address recommendations",
+          "status": "pending"
+        },
+        {
+          "id": "12.9",
+          "task": "Verify color contrast and semantic HTML usage",
+          "status": "pending"
+        },
+        {
+          "id": "12.10",
+          "task": "Refine UI elements (e.g. buttons) using Bootstrap utilities for modern look and feel",
+          "status": "complete"
+        }
+      ]
     }
   ]
 }

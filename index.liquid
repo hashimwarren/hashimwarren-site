@@ -1,118 +1,86 @@
 ---
-layout: base
-title: Hashim Warren | Marketing Strategy
+layout: base.liquid
+title: Home - Hashim Warren
+permalink: /
+description: "Welcome to the personal portfolio and blog of Hashim Warren, a marketing strategist in North Carolina."
 ---
 
 <div class="container">
   <!-- Hero Section -->
   <section class="py-5 text-center">
     <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
+      <div class="col-lg-8 col-md-10 mx-auto bg-white p-4 p-md-5 rounded shadow-sm">
         <h1 class="fw-light">Hashim Warren</h1>
         <p class="lead text-muted">Marketing strategist helping North Carolina businesses achieve their goals. I specialize in data-driven approaches to connect with local customers and drive growth.</p>
         <p>
-          <a href="/portfolio/" class="btn btn-primary my-2">View My Work</a>
-          <a href="/contact/" class="btn btn-secondary my-2">Get in Touch</a>
+          <a href="/portfolio/" class="btn btn-primary btn-lg my-2">View My Work</a>
+          <a href="/contact/" class="btn btn-outline-secondary btn-lg my-2">Get in Touch</a>
         </p>
       </div>
     </div>
   </section>
 
   <!-- Featured Blog Posts -->
+  {% if collections.posts and collections.posts.length > 0 %}
   <section class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-4">Latest Insights</h2>
       <div class="row g-4">
-        <!-- Blog Post Card 1 -->
+        {%- for post in collections.posts | reverse | limit:3 -%}
         <div class="col-md-4">
-          <div class="card h-100">
-            <img src="https://placehold.co/600x400.png?text=Blog+Post+Image" class="card-img-top card-img-top-fixed-height" alt="Placeholder Blog Post Image">
-            <div class="card-body text-center">
-              <p class="text-muted text-uppercase small mb-2">MAY 10, 2025</p>
-              <h5 class="card-title text-uppercase">Post Title 1</h5>
-              <p class="card-text text-start">This is a summary of the blog post, providing a natural lead-in to the full content.</p>
-              <a href="#" class="btn btn-sm btn-outline-secondary">Read More</a>
+          <div class="card h-100 border-0 shadow-sm bg-white">
+            {% if post.data.featuredImage %}
+            <img src="{{ post.data.featuredImage }}" class="card-img-top card-img-top-fixed-height" alt="{{ post.data.imageAlt | default: 'Blog post image' }}">
+            {% else %}
+            <img src="https://placehold.co/600x400.png?text={{post.data.title | replace: ' ', '+'}}" class="card-img-top card-img-top-fixed-height" alt="Placeholder image for {{post.data.title}}">
+            {% endif %}
+            <div class="card-body text-center d-flex flex-column">
+              {% if post.data.date %}<p class="text-muted text-uppercase small mb-2">{{ post.date | date: "%B %d, %Y" }}</p>{% endif %}
+              <h5 class="card-title text-uppercase">{{ post.data.title }}</h5>
+              {% if post.data.summary %}<p class="card-text text-start">{{ post.data.summary }}</p>{% endif %}
+              <a href="{{ post.url | url }}" class="btn btn-sm btn-outline-secondary mt-auto">Read More</a>
             </div>
           </div>
         </div>
-        <!-- Blog Post Card 2 -->
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="https://placehold.co/600x400.png?text=Blog+Post+Image" class="card-img-top card-img-top-fixed-height" alt="Placeholder Blog Post Image">
-            <div class="card-body text-center">
-              <p class="text-muted text-uppercase small mb-2">MAY 05, 2025</p>
-              <h5 class="card-title text-uppercase">Post Title 2</h5>
-              <p class="card-text text-start">Another interesting insight or update shared in a concise summary format here.</p>
-              <a href="#" class="btn btn-sm btn-outline-secondary">Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Blog Post Card 3 -->
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="https://placehold.co/600x400.png?text=Blog+Post+Image" class="card-img-top card-img-top-fixed-height" alt="Placeholder Blog Post Image">
-            <div class="card-body text-center">
-              <p class="text-muted text-uppercase small mb-2">APRIL 28, 2025</p>
-              <h5 class="card-title text-uppercase">Post Title 3</h5>
-              <p class="card-text text-start">A brief overview of the third blog post, designed to capture attention.</p>
-              <a href="#" class="btn btn-sm btn-outline-secondary">Read More</a>
-            </div>
-          </div>
-        </div>
+        {%- endfor -%}
       </div>
       <div class="text-center mt-4">
         <a href="/blog/" class="btn btn-primary">View All Posts</a>
       </div>
     </div>
   </section>
+  {% endif %}
 
   <!-- Portfolio Highlights -->
+  {% if collections.project and collections.project.length > 0 %}
   <section class="py-5">
     <div class="container">
       <h2 class="text-center mb-4">Featured Projects</h2>
       <div class="row g-4">
-        <!-- Project Card 1 -->
+        {%- for project in collections.project | limit:3 -%}
         <div class="col-md-4">
-          <div class="card h-100">
-            <img src="https://placehold.co/600x400.png?text=Project+Image" class="card-img-top card-img-top-fixed-height" alt="Placeholder Project Image">
-            <div class="card-body text-center">
-              <p class="text-muted text-uppercase small mb-2">CLIENT NAME 1</p>
-              <h5 class="card-title text-uppercase">Project Title 1</h5>
-              <p class="card-text text-start">Brief description of the project and its outcomes. Highlighting key achievements.</p>
-              <a href="#" class="btn btn-sm btn-outline-secondary">View Project</a>
+          <div class="card h-100 border-0 shadow-sm bg-white">
+            {% if project.data.image %}
+            <img src="{{ project.data.image }}" class="card-img-top card-img-top-fixed-height" alt="{{ project.data.imageAlt | default: 'Project image' }}">
+            {% else %}
+            <img src="https://placehold.co/600x400.png?text={{project.data.title | replace: ' ', '+'}}" class="card-img-top card-img-top-fixed-height" alt="Placeholder image for {{project.data.title}}">
+            {% endif %}
+            <div class="card-body text-center d-flex flex-column">
+              {% if project.data.client %}<p class="text-muted text-uppercase small mb-2">{{ project.data.client }}</p>{% endif %}
+              <h5 class="card-title text-uppercase">{{ project.data.title }}</h5>
+              {% if project.data.description %}<p class="card-text text-start">{{ project.data.description }}</p>{% endif %}
+              <a href="{{ project.url | url }}" class="btn btn-sm btn-outline-secondary mt-auto">View Project</a>
             </div>
           </div>
         </div>
-        <!-- Project Card 2 -->
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="https://placehold.co/600x400.png?text=Project+Image" class="card-img-top card-img-top-fixed-height" alt="Placeholder Project Image">
-            <div class="card-body text-center">
-              <p class="text-muted text-uppercase small mb-2">CLIENT NAME 2</p>
-              <h5 class="card-title text-uppercase">Project Title 2</h5>
-              <p class="card-text text-start">Details about another successful project, focusing on results and impact.</p>
-              <a href="#" class="btn btn-sm btn-outline-secondary">View Project</a>
-            </div>
-          </div>
-        </div>
-        <!-- Project Card 3 -->
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="https://placehold.co/600x400.png?text=Project+Image" class="card-img-top card-img-top-fixed-height" alt="Placeholder Project Image">
-            <div class="card-body text-center">
-              <p class="text-muted text-uppercase small mb-2">CLIENT NAME 3</p>
-              <h5 class="card-title text-uppercase">Project Title 3</h5>
-              <p class="card-text text-start">Showcasing a third project with a concise summary of the work and success.</p>
-              <a href="#" class="btn btn-sm btn-outline-secondary">View Project</a>
-            </div>
-          </div>
-        </div>
+        {%- endfor -%}
       </div>
       <div class="text-center mt-4">
         <a href="/portfolio/" class="btn btn-primary">View All Projects</a>
       </div>
     </div>
   </section>
+  {% endif %}
 
   <!-- Call to Action - Resume -->
   <section class="py-5 text-center bg-light">
@@ -120,8 +88,8 @@ title: Hashim Warren | Marketing Strategy
       <h2 class="fw-light">Ready to Learn More?</h2>
       <p class="lead text-muted">Download my resume to see my full experience or get in touch to discuss your marketing needs.</p>
       <p>
-        <a href="/assets/resume.pdf" class="btn btn-primary my-2" download>Download Resume</a> 
-        <a href="/contact/" class="btn btn-secondary my-2">Contact Me</a>
+        <a href="/assets/resume.pdf" class="btn btn-primary btn-lg my-2" download="Hashim_Warren_Resume.pdf">Download Resume</a> 
+        <a href="/contact/" class="btn btn-outline-secondary my-2">Contact Me</a>
       </p>
     </div>
   </section>
