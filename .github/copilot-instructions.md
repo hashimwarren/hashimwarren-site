@@ -42,6 +42,20 @@ A personal portfolio and blog site to showcase marketing strategy work and attra
 - Clear CTAs (e.g., "View Resume", "Contact Me")
 - Mobile-first design
 
+## CSS & Design Principles
+
+- Avoid writing custom CSS unless absolutely necessary.
+- Use Bootstrap’s utility classes and layout system as much as possible.
+- Stick to Bootstrap's grid, spacing, and component patterns for layout and responsiveness.
+- When styling is needed, prefer using Bootstrap’s utility classes (like `mb-3`, `text-center`, `bg-light`, etc.).
+- Do not override Bootstrap styles with custom CSS unless there is no Bootstrap-native way to achieve the design.
+- The goal is to have a consistent, professional look while minimizing long-term CSS maintenance.
+
+## Visual Style Goals
+
+- The design should feel custom and polished, but still be fully within the Bootstrap design system.
+- If you’re tempted to write a new CSS class, first look for a Bootstrap utility class or component variation.
+
 ## Security Considerations
 
 - Spam protection on Netlify Forms (honeypot/captcha)

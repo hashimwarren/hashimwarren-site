@@ -1,10 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+:root {
+  /* Bootstrap Theme Color Overrides */
+  --bs-primary: #0056b3;
+  --bs-primary-rgb: 0, 86, 179;
+  /* --bs-secondary: #6c757d; /* Default Bootstrap gray, can be kept or customized */
+  /* --bs-light: #f8f9fa; /* Default Bootstrap light, can be kept or customized */
+  /* --bs-dark: #343a40; /* Default Bootstrap dark, can be kept or customized */
+
+  /* Application-specific variables (use sparingly) */
+  --app-font-sans-serif: "Inter", var(--bs-font-sans-serif);
+  --app-border-color: #e0e0e0; /* For elements like cards if Bootstrap's default isn't desired */
+  --app-card-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  --app-card-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --app-white: #ffffff;
+  /* --app-medium-gray: #6c757d; /* Equivalent to Bootstrap's text-muted or text-secondary - Use Bootstrap classes directly */
+  /* --app-dark-gray: #343a40; /* Equivalent to Bootstrap's text-dark - Use Bootstrap classes directly */
+}
+
 /* Custom styles for Hashim Warren's portfolio site */
 
 body {
-  font-family: var(
-    --bs-font-sans-serif
-  ); /* Using Bootstrap's default sans-serif */
-  color: var(--bs-body-color);
+  font-family: var(--app-font-sans-serif);
+  color: var(--bs-dark); /* Using Bootstrap's dark color */
+  background-color: var(--app-white);
   line-height: 1.6;
 }
 
@@ -14,25 +33,23 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500; /* Slightly bolder than default for Bootstrap */
+  font-family: var(--app-font-sans-serif);
+  font-weight: 500;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  color: var(
-    --bs-heading-color,
-    inherit
-  ); /* Respect Bootstrap's heading color or inherit */
+  color: var(--bs-heading-color, inherit);
 }
 
 h1 {
-  font-size: 2.5rem; /* Bootstrap's h1 is 2.5rem by default */
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2rem; /* Bootstrap's h2 is 2rem by default */
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.75rem; /* Bootstrap's h3 is 1.75rem by default */
+  font-size: 1.75rem;
 }
 
 p {
@@ -40,73 +57,57 @@ p {
 }
 
 a {
-  color: var(--bs-link-color);
+  color: var(--bs-primary);
 }
 
-a:hover {
-  color: var(--bs-link-hover-color);
-}
+/* a:hover is handled by Bootstrap default */
 
 .navbar-brand {
-  font-weight: bold;
+  font-weight: bold; /* This is fine as a minor tweak */
 }
 
-/* Button Styles */
-.btn-primary {
-  background-color: #0d6efd; /* Bootstrap primary blue */
-  border-color: #0d6efd;
-  color: #fff;
-}
+/* Button Styles are inherited from Bootstrap and :root overrides */
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
-  color: #fff;
-}
-
-.btn-secondary {
-  background-color: #6c757d; /* Bootstrap secondary gray */
-  border-color: #6c757d;
-  color: #fff;
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-secondary:active {
-  background-color: #5c636a;
-  border-color: #565e64;
-  color: #fff;
-}
-
-/* Card Component Styles */
+/* Custom Card Styling (Minimal) */
 .card {
-  border: 1px solid #dee2e6; /* Bootstrap default card border color */
-  border-radius: 0.25rem; /* Bootstrap default card border radius */
-  margin-bottom: 1.5rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow for depth */
+  /* Targeting Bootstrap's .card class directly for minimal additions */
+  border-color: var(
+    --app-border-color
+  ); /* Example: if a custom border color is needed */
+  box-shadow: var(--app-card-shadow);
 }
 
-.card-img-top {
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
+.card:hover {
+  box-shadow: var(--app-card-hover-shadow);
 }
 
-.card-body {
-  padding: 1.25rem; /* Bootstrap default card body padding */
+/* Styles for the image within the card if fixed height/object-fit is essential */
+.card-img-top-fixed-height {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
 }
 
-.card-title {
-  margin-bottom: 0.75rem; /* Bootstrap default card title margin */
+/* Navbar Styles */
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+  color: var(--app-white); /* Ensure white text on primary background */
 }
 
-.card-text:last-child {
-  margin-bottom: 0;
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link:focus {
+  color: rgba(255, 255, 255, 0.85); /* Slightly dimmed white for hover/focus */
 }
 
-.card-link + .card-link {
-  margin-left: 1.25rem;
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Footer Styles */
+/* Footer styling is primarily handled by Bootstrap utility classes in HTML */
+.footer .nav-link:hover, /* Ensure footer links use primary color on hover */
+.footer .nav-link:focus {
+  color: var(--bs-primary);
 }
 
 /* Add more specific styles as needed based on design guidelines */

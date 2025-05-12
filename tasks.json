@@ -169,6 +169,59 @@
       "completed": true
     },
     {
+      "id": "6.2",
+      "description": "Build homepage layout",
+      "status": "complete",
+      "details": "Create the homepage with an introduction, featured blog posts, and portfolio highlights, using Bootstrap for styling. Converted index.md to index.liquid."
+    },
+    {
+      "id": "6.3",
+      "description": "Redesign site based on new card style",
+      "status": "complete",
+      "subtasks": [
+        {
+          "id": "6.3.1",
+          "description": "Analyze new card style and define CSS properties",
+          "status": "complete"
+        },
+        {
+          "id": "6.3.2",
+          "description": "Implement new card CSS in assets/css/style.css",
+          "status": "complete"
+        },
+        {
+          "id": "6.3.3",
+          "description": "Update card HTML structure in index.liquid and other relevant files",
+          "status": "complete"
+        },
+        {
+          "id": "6.3.4",
+          "description": "Update global typography in assets/css/style.css to match new aesthetic.",
+          "status": "complete"
+        },
+        {
+          "id": "6.3.5",
+          "description": "Update site color palette and backgrounds in assets/css/style.css.",
+          "status": "complete"
+        },
+        {
+          "id": "6.3.6",
+          "description": "Update button styles in assets/css/style.css.",
+          "status": "complete"
+        },
+        {
+          "id": "6.3.7",
+          "description": "Update navigation and footer styles in assets/css/style.css.",
+          "status": "complete"
+        },
+        {
+          "id": "6.3.8",
+          "description": "Review and adjust overall site spacing and layout for consistency.",
+          "status": "complete"
+        }
+      ]
+    },
+    {
       "id": "7.1",
       "title": "Create About page",
       "description": "Build the About page with professional bio, background, and optional headshot.",
