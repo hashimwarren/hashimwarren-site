@@ -1,0 +1,32 @@
+---
+layout: base.liquid
+---
+
+<div class="container mt-4 mb-5">
+  <article class="blog-post">
+    <header class="py-4 text-center border-bottom mb-4">
+      <h1 class="fw-light display-5">{{ title }}</h1>
+      <p class="text-muted fs-5">
+        Published on <time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: "%B %d, %Y" }}</time>
+        {% if tags and tags.length > 0 %}
+          <br> Tags:
+          {% for tag in tags %}
+            {% if tag != "posts" %} {# Common to exclude the collection tag itself if auto-added #}
+              <a href="/tags/{{ tag | slugify }}/" class="badge bg-secondary text-decoration-none me-1">{{ tag }}</a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </p>
+    </header>
+
+    {% if image %}
+    <div class="text-center mb-4">
+      <img src="{{ image }}" class="img-fluid rounded shadow-sm" alt="{{ imageAlt | default: title }}" style="max-height: 450px; object-fit: cover; width: 100%; max-width: 900px;">
+    </div>
+    {% endif %}
+
+    <div class="post-content fs-5">
+      {{ content }}
+    </div>
+  </article>
+</div>

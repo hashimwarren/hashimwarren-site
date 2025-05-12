@@ -137,9 +137,14 @@
       "completed": true
     },
     {
+      "id": "4.4",
+      "name": "Build blog listing page",
+      "status": "complete"
+    },
+    {
       "id": "4.5",
       "name": "Build portfolio listing page",
-      "status": "in-progress"
+      "status": "complete"
     },
     {
       "id": "5.1",
@@ -239,7 +244,32 @@
         {
           "id": "6.4.2",
           "name": "Test Portfolio page (`portfolio.liquid`) on various screen sizes.",
+          "status": "complete"
+        },
+        {
+          "id": "6.4.3",
+          "name": "Test Blog listing page (`blog.liquid`) on various screen sizes.",
+          "status": "complete"
+        },
+        {
+          "id": "6.4.4",
+          "name": "Test individual Blog Post template on various screen sizes.",
+          "status": "complete"
+        },
+        {
+          "id": "6.4.5",
+          "name": "Test About page on various screen sizes.",
           "status": "in-progress"
+        },
+        {
+          "id": "6.4.6",
+          "name": "Test Contact page on various screen sizes.",
+          "status": "pending"
+        },
+        {
+          "id": "6.4.7",
+          "name": "Make necessary adjustments using Bootstrap grid and utility classes.",
+          "status": "pending"
         }
       ]
     },
@@ -249,7 +279,8 @@
       "description": "Build the About page with professional bio, background, and optional headshot.",
       "test": "Verify the page renders correctly and all content is displayed properly.",
       "difficulty": 2,
-      "completed": false
+      "completed": false,
+      "status": "in-progress"
     },
     {
       "id": "7.2",
@@ -273,7 +304,7 @@
       "description": "Design a template for individual blog post pages with title, date, content, and optional tags.",
       "test": "Verify single post pages render Markdown content correctly.",
       "difficulty": 3,
-      "completed": false
+      "completed": true
     },
     {
       "id": "9.1",
