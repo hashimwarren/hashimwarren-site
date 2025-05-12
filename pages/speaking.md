@@ -1,60 +1,52 @@
 ---
-layout: base.liquid
+layout: page.liquid
 title: Speaking Engagements
+subtitle: I am passionate about sharing insights on marketing strategy, digital trends, and community building.
 permalink: /speaking/
 ---
 
-<div class="container mt-5">
-  <header class="mb-4">
-    <h1 class="display-4">Speaking Engagements</h1>
-    <p class="lead">I am passionate about sharing insights on marketing strategy, digital trends, and community building. Below are some of the topics I speak about and past engagements.</p>
-  </header>
+## Speaking Topics
 
-  <section id="topics" class="mb-5">
-    <h2 class="mb-3">Speaking Topics</h2>
-    <ul class="list-group">
-      <li class="list-group-item">The Future of Digital Marketing in Local Economies</li>
-      <li class="list-group-item">Building Authentic Community Engagement</li>
-      <li class="list-group-item">Content Strategy for Small Businesses</li>
-      <li class="list-group-item">Leveraging Data for Marketing Success</li>
-      <li class="list-group-item">Personal Branding for Professionals</li>
-    </ul>
-  </section>
+### The Future of Digital Marketing in Local Economies
 
-  <section id="past-engagements" class="mb-5">
-    <h2 class="mb-3">Past Engagements</h2>
-    <div class="accordion" id="accordionPastEngagements">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            <strong>Event Name 1</strong> - City, State (Date)
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionPastEngagements">
-          <div class="accordion-body">
-            <p>Brief description of the talk and event. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">View Presentation (if available)</a>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <strong>Workshop: Topic XYZ</strong> - Online (Date)
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPastEngagements">
-          <div class="accordion-body">
-            <p>Details about the workshop. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Add more past engagements as needed -->
-    </div>
-  </section>
+How small businesses can leverage digital tools to compete effectively in their local markets.
 
-  <section id="booking" class="mb-5">
-    <h2 class="mb-3">Book Me to Speak</h2>
-    <p>If you're interested in having me speak at your event, conference, or workshop, please reach out via the <a href="/contact/">contact page</a>. I'd love to discuss how I can contribute to your audience.</p>
-  </section>
-</div>
+### Building Authentic Community Engagement
+
+Strategies for creating meaningful connections with your audience through authentic content and interaction.
+
+### Content Strategy for Small Businesses
+
+Practical approaches to content creation that drive results without overwhelming resources.
+
+## Past Engagements
+
+### NC Marketing Summit - Raleigh, NC
+
+April 2025
+
+Keynote presentation on data-driven marketing strategies for local businesses.
+
+### Triangle Tech Conference - Durham, NC
+
+February 2025
+
+Panel discussion on integrating traditional and digital marketing approaches for maximum impact.
+
+### Small Business Week - Charlotte, NC
+
+November 2024
+
+Workshop on practical social media strategies for local business owners.
+
+### Marketing Professionals Network - Asheville, NC
+
+September 2024
+
+Featured speaker on community-based marketing approaches in tourist destinations.
+
+## Hire Me To Speak
+
+I'm available for keynote presentations, workshops, panel discussions, and consulting sessions on marketing strategy and digital transformation. My presentations are tailored to the specific needs of your audience and include practical takeaways that can be implemented immediately.
+
+[Contact Me For Speaking Opportunities](/contact/){: .btn .btn-dark .rounded-pill .px-4 .mt-3}

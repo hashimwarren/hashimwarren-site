@@ -44,6 +44,10 @@ A personal portfolio and blog site to showcase marketing strategy work and attra
 
 ## CSS & Design Principles
 
+- Use Bootstrap 5 classes whenever possible.
+- Prefer Liquid includes/shortcodes over custom CSS.
+- Follow existing pattern files in /\_includes and /\_data.
+
 - Avoid writing custom CSS unless absolutely necessary.
 - Use Bootstrap’s utility classes and layout system as much as possible.
 - Stick to Bootstrap's grid, spacing, and component patterns for layout and responsiveness.

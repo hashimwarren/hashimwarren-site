@@ -23,46 +23,77 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+    <!-- Add FontAwesome for improved social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-body-tertiary">
     <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
-            <div class="container">
-                <a class="navbar-brand" href="/">Hashim Warren</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/speaking">Speaking</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    
+    <!-- Fixed navbar -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg py-3 bg-dark navbar-dark" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="/">Hashim Warren</a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link px-3" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link px-3" href="/portfolio">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link px-3" href="/speaking">Speaking</a></li>
+              <li class="nav-item"><a class="nav-link px-3" href="/blog">Blog</a></li>
+              <li class="nav-item"><a class="nav-link px-3" href="/about">About</a></li>
+              <li class="nav-item"><a class="nav-link px-3 me-2" href="/contact">Contact</a></li>
+              <li class="nav-item d-none d-lg-block"><a class="btn btn-sm btn-primary rounded-pill px-3" href="/contact">Let's Connect</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main id="main-content" class="container mt-4">
-        {{ content }}
-    </main>
+    <!-- Add padding for fixed header -->
+    <div class="pt-5 mt-4">
+      <main id="main-content">
+          {{ content }}
+      </main>
+    </div>
 
-    <footer class="footer text-center mt-5 py-3 bg-light">
+    <footer class="footer py-5 bg-dark text-white">
         <div class="container">
-            <p class="mb-0 text-dark">&copy; <span id="site-year">{{ site.currentYear }}</span> Hashim Warren</p>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link px-2 text-secondary" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link px-2 text-secondary" href="/portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link px-2 text-secondary" href="/speaking">Speaking</a></li>
-                <li class="nav-item"><a class="nav-link px-2 text-secondary" href="/blog">Blog</a></li>
-                <li class="nav-item"><a class="nav-link px-2 text-secondary" href="/about">About</a></li>
-                <li class="nav-item"><a class="nav-link px-2 text-secondary" href="/contact">Contact</a></li>
-            </ul>
-            <!-- Placeholder for social media icons -->
+            <div class="row gy-4">
+                <div class="col-md-5">
+                    <h5 class="fw-bold mb-3">Hashim Warren</h5>
+                    <p class="text-white-50 mb-0">Marketing strategist helping North Carolina businesses achieve their growth goals through data-driven approaches and compelling storytelling.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Navigation</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link px-0 py-1 text-white-50" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-0 py-1 text-white-50" href="/portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link px-0 py-1 text-white-50" href="/speaking">Speaking</a></li>
+                        <li class="nav-item"><a class="nav-link px-0 py-1 text-white-50" href="/blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link px-0 py-1 text-white-50" href="/about">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-0 py-1 text-white-50" href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Connect</h5>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:email@example.com" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <p class="text-white-50 text-center mb-0">&copy; <span id="site-year">{{ site.currentYear }}</span> Hashim Warren. All rights reserved.</p>
         </div>
     </footer>
 

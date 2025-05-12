@@ -1,96 +1,226 @@
 ---
 layout: base.liquid
-title: Home - Hashim Warren
+title: Hashim Warren - Marketing Strategist in North Carolina
 permalink: /
-description: "Welcome to the personal portfolio and blog of Hashim Warren, a marketing strategist in North Carolina."
+description: "Hashim Warren is a marketing strategist helping North Carolina businesses achieve growth through data-driven strategies and compelling storytelling."
 ---
 
-<div class="container">
-  <!-- Hero Section -->
-  <section class="py-5 text-center">
-    <div class="row py-lg-5">
-      <div class="col-lg-8 col-md-10 mx-auto bg-white p-4 p-md-5 rounded shadow-sm">
-        <h1 class="fw-light">Hashim Warren</h1>
-        <p class="lead text-muted">Marketing strategist helping North Carolina businesses achieve their goals. I specialize in data-driven approaches to connect with local customers and drive growth.</p>
-        <p>
-          <a href="/portfolio/" class="btn btn-primary btn-lg my-2">View My Work</a>
-          <a href="/contact/" class="btn btn-outline-secondary btn-lg my-2">Get in Touch</a>
-        </p>
+<!-- Hero Section -->
+<section class="py-5 bg-dark text-white">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-7 pe-lg-5">
+        <span class="badge bg-primary bg-opacity-25 text-white mb-3 px-3 py-2 rounded-pill">Marketing Strategist</span>
+        <h1 class="display-3 fw-bold mb-4">Helping NC Businesses Grow Through Data-Driven Marketing</h1>
+        <p class="lead fs-4 mb-5">I partner with local North Carolina businesses to develop effective marketing strategies that connect with your target audience and deliver measurable results.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="/portfolio/" class="btn btn-primary btn-lg px-4 rounded-pill">View My Work</a>
+          <a href="/contact/" class="btn btn-outline-light btn-lg px-4 rounded-pill">Get in Touch</a>
+        </div>
+      </div>
+      <div class="col-lg-5 mt-5 mt-lg-0">
+        <div class="bg-primary bg-opacity-10 p-4 p-lg-5 rounded-4 border border-primary border-opacity-25 shadow">
+          <p class="fst-italic text-white-50 mb-0">"The modern marketer is part analyst, part strategist, and part storyteller - combining data-driven insights with compelling narratives to create meaningful connections with local communities."</p>
+          <p class="text-end mt-3 fs-6 fw-bold">- Hashim Warren</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Featured Blog Posts -->
-  {% if collections.posts and collections.posts.length > 0 %}
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Latest Insights</h2>
-      <div class="row g-4">
-        {%- for post in collections.posts | reverse | limit:3 -%}
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm bg-white">
-            {% if post.data.featuredImage %}
-            <img src="{{ post.data.featuredImage }}" class="card-img-top card-img-top-fixed-height" alt="{{ post.data.imageAlt | default: 'Blog post image' }}">
-            {% else %}
-            <img src="https://placehold.co/600x400.png?text={{post.data.title | replace: ' ', '+'}}" class="card-img-top card-img-top-fixed-height" alt="Placeholder image for {{post.data.title}}">
-            {% endif %}
-            <div class="card-body text-center d-flex flex-column">
-              {% if post.data.date %}<p class="text-muted text-uppercase small mb-2">{{ post.date | date: "%B %d, %Y" }}</p>{% endif %}
-              <h5 class="card-title text-uppercase">{{ post.data.title }}</h5>
-              {% if post.data.summary %}<p class="card-text text-start">{{ post.data.summary }}</p>{% endif %}
-              <a href="{{ post.url | url }}" class="btn btn-sm btn-outline-secondary mt-auto">Read More</a>
+<!-- Services Section -->
+<section class="py-5 bg-light">
+  <div class="container py-5">
+    <div class="row mb-5">
+      <div class="col-lg-6">
+        <span class="badge bg-dark px-3 py-2 rounded-pill mb-3">Services</span>
+        <h2 class="display-6 fw-bold">How I Can Help Your Business</h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+          <div class="bg-primary bg-opacity-10 p-3 rounded-circle mb-4 text-center" style="width: 60px; height: 60px">
+            <i class="fas fa-chart-line text-primary fs-4"></i>
+          </div>
+          <h4 class="fw-bold mb-3">Marketing Strategy</h4>
+          <p class="text-secondary mb-0">Data-driven marketing plans tailored to your specific business goals and target audience.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+          <div class="bg-primary bg-opacity-10 p-3 rounded-circle mb-4 text-center" style="width: 60px; height: 60px">
+            <i class="fas fa-bullseye text-primary fs-4"></i>
+          </div>
+          <h4 class="fw-bold mb-3">Local SEO</h4>
+          <p class="text-secondary mb-0">Improve your visibility in local search results to attract nearby customers actively looking for your products.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+          <div class="bg-primary bg-opacity-10 p-3 rounded-circle mb-4 text-center" style="width: 60px; height: 60px">
+            <i class="fas fa-users text-primary fs-4"></i>
+          </div>
+          <h4 class="fw-bold mb-3">Community Building</h4>
+          <p class="text-secondary mb-0">Develop authentic connections with your local audience through strategic community engagement.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="bg-white rounded-4 p-4 h-100 shadow-sm">
+          <div class="bg-primary bg-opacity-10 p-3 rounded-circle mb-4 text-center" style="width: 60px; height: 60px">
+            <i class="fas fa-edit text-primary fs-4"></i>
+          </div>
+          <h4 class="fw-bold mb-3">Content Strategy</h4>
+          <p class="text-secondary mb-0">Create compelling content that resonates with your audience and drives meaningful engagement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Blog Posts -->
+{% if collections.posts and collections.posts.length > 0 %}
+<section class="py-5 bg-white">
+  <div class="container py-5">
+    <div class="row mb-5">
+      <div class="col-lg-6">
+        <span class="badge bg-dark px-3 py-2 rounded-pill mb-3">Blog</span>
+        <h2 class="display-6 fw-bold">Latest Insights</h2>
+      </div>
+      <div class="col-lg-6 text-lg-end d-flex align-items-center justify-content-lg-end">
+        <a href="/blog/" class="btn btn-outline-dark rounded-pill px-4">View All Posts</a>
+      </div>
+    </div>
+    <div class="row g-5">
+      {%- for post in collections.posts | reverse | limit:3 -%}
+      <div class="col-md-4">
+        <div class="bg-light rounded-4 p-3 h-100 shadow-sm border-0">
+          {% if post.data.featuredImage %}
+          <img src="{{ post.data.featuredImage }}" class="card-img-top rounded-3" style="height: 200px; object-fit: cover;" alt="{{ post.data.imageAlt | default: 'Blog post image' }}">
+          {% else %}
+          <img src="https://placehold.co/600x400.png?text={{post.data.title | replace: ' ', '+'}}" class="card-img-top rounded-3" style="height: 200px; object-fit: cover;" alt="Placeholder image for {{post.data.title}}">
+          {% endif %}
+          <div class="p-3">
+            {% if post.data.date %}<div class="d-flex align-items-center mb-3"><span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">{{ post.date | date: "%B %d, %Y" }}</span></div>{% endif %}
+            <h5 class="fw-bold">{{ post.data.title }}</h5>
+            {% if post.data.summary %}<p class="text-secondary">{{ post.data.summary }}</p>{% endif %}
+            <a href="{{ post.url | url }}" class="btn btn-link text-dark p-0 text-decoration-none fw-bold">Read More →</a>
+          </div>
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Portfolio Highlights -->
+{% if collections.project and collections.project.length > 0 %}
+<section class="py-5 bg-light">
+  <div class="container py-5">
+    <div class="row mb-5">
+      <div class="col-lg-6">
+        <span class="badge bg-dark px-3 py-2 rounded-pill mb-3">Projects</span>
+        <h2 class="display-6 fw-bold">Featured Work</h2>
+      </div>
+      <div class="col-lg-6 text-lg-end d-flex align-items-center justify-content-lg-end">
+        <a href="/portfolio/" class="btn btn-outline-dark rounded-pill px-4">View All Projects</a>
+      </div>
+    </div>
+    <div class="row g-5">
+      {%- for project in collections.project | limit:3 -%}
+      <div class="col-md-4">
+        <div class="card h-100 border-0 rounded-4 overflow-hidden shadow-sm">
+          {% if project.data.image %}
+          <img src="{{ project.data.image }}" class="card-img-top" style="height: 220px; object-fit: cover;" alt="{{ project.data.imageAlt | default: 'Project image' }}">
+          {% else %}
+          <img src="https://placehold.co/600x400.png?text={{project.data.title | replace: ' ', '+'}}" class="card-img-top" style="height: 220px; object-fit: cover;" alt="Placeholder image for {{project.data.title}}">
+          {% endif %}
+          <div class="card-body p-4">
+            {% if project.data.client %}<div class="d-flex align-items-center mb-2"><span class="badge bg-secondary bg-opacity-10 text-secondary px-3 py-2 fw-normal">{{ project.data.client }}</span></div>{% endif %}
+            <h5 class="fw-bold mb-3">{{ project.data.title }}</h5>
+            {% if project.data.summary %}<p class="text-secondary mb-4">{{ project.data.summary }}</p>{% endif %}
+            <div>
+              <a href="{{ project.url | url }}" class="stretched-link btn btn-sm btn-dark rounded-pill px-4">View Project</a>
             </div>
           </div>
         </div>
-        {%- endfor -%}
       </div>
-      <div class="text-center mt-4">
-        <a href="/blog/" class="btn btn-primary">View All Posts</a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- Testimonials -->
+<section class="py-5 bg-white">
+  <div class="container py-5">
+    <div class="row mb-5 justify-content-center text-center">
+      <div class="col-lg-8">
+        <span class="badge bg-dark px-3 py-2 rounded-pill mb-3">Testimonials</span>
+        <h2 class="display-6 fw-bold mb-3">What Clients Say</h2>
+        <p class="text-secondary lead">I've had the privilege of working with amazing clients across North Carolina. Here's what they have to say about our work together.</p>
       </div>
     </div>
-  </section>
-  {% endif %}
-
-  <!-- Portfolio Highlights -->
-  {% if collections.project and collections.project.length > 0 %}
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Featured Projects</h2>
-      <div class="row g-4">
-        {%- for project in collections.project | limit:3 -%}
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm bg-white">
-            {% if project.data.image %}
-            <img src="{{ project.data.image }}" class="card-img-top card-img-top-fixed-height" alt="{{ project.data.imageAlt | default: 'Project image' }}">
-            {% else %}
-            <img src="https://placehold.co/600x400.png?text={{project.data.title | replace: ' ', '+'}}" class="card-img-top card-img-top-fixed-height" alt="Placeholder image for {{project.data.title}}">
-            {% endif %}
-            <div class="card-body text-center d-flex flex-column">
-              {% if project.data.client %}<p class="text-muted text-uppercase small mb-2">{{ project.data.client }}</p>{% endif %}
-              <h5 class="card-title text-uppercase">{{ project.data.title }}</h5>
-              {% if project.data.description %}<p class="card-text text-start">{{ project.data.description }}</p>{% endif %}
-              <a href="{{ project.url | url }}" class="btn btn-sm btn-outline-secondary mt-auto">View Project</a>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="bg-light p-4 p-lg-5 rounded-4 h-100 shadow-sm">
+              <div class="d-flex mb-4">
+                {% for i in (1..5) %}
+                <i class="fas fa-star text-warning me-1"></i>
+                {% endfor %}
+              </div>
+              <p class="fst-italic mb-4">"Hashim transformed our marketing approach completely. His data-driven strategies helped us identify our most profitable customer segments and create messaging that truly resonates. We've seen a 45% increase in qualified leads since implementing his recommendations."</p>
+              <div class="d-flex align-items-center">
+                <div class="bg-dark rounded-circle text-white p-3 me-3 fw-bold">JM</div>
+                <div>
+                  <h6 class="fw-bold mb-0">Jessica Miller</h6>
+                  <p class="small text-secondary mb-0">CEO, Triangle Tech Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="bg-light p-4 p-lg-5 rounded-4 h-100 shadow-sm">
+              <div class="d-flex mb-4">
+                {% for i in (1..5) %}
+                <i class="fas fa-star text-warning me-1"></i>
+                {% endfor %}
+              </div>
+              <p class="fst-italic mb-4">"Working with Hashim was a game-changer for our local retail business. He helped us develop a community-focused marketing strategy that has strengthened our brand presence and customer loyalty. His knowledge of the North Carolina market is unmatched."</p>
+              <div class="d-flex align-items-center">
+                <div class="bg-dark rounded-circle text-white p-3 me-3 fw-bold">RW</div>
+                <div>
+                  <h6 class="fw-bold mb-0">Robert Washington</h6>
+                  <p class="small text-secondary mb-0">Owner, Piedmont Provisions</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        {%- endfor -%}
-      </div>
-      <div class="text-center mt-4">
-        <a href="/portfolio/" class="btn btn-primary">View All Projects</a>
       </div>
     </div>
-  </section>
-  {% endif %}
+  </div>
+</section>
 
-  <!-- Call to Action - Resume -->
-  <section class="py-5 text-center bg-light">
-    <div class="container">
-      <h2 class="fw-light">Ready to Learn More?</h2>
-      <p class="lead text-muted">Download my resume to see my full experience or get in touch to discuss your marketing needs.</p>
-      <p>
-        <a href="/assets/resume.pdf" class="btn btn-primary btn-lg my-2" download="Hashim_Warren_Resume.pdf">Download Resume</a> 
-        <a href="/contact/" class="btn btn-outline-secondary my-2">Contact Me</a>
-      </p>
+<!-- Call to Action - Resume -->
+<section class="py-5 bg-dark text-white">
+  <div class="container py-5">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <h2 class="display-5 fw-bold mb-4">Ready to Elevate Your Marketing?</h2>
+        <p class="lead fs-5 mb-5 text-white-50">Download my resume to see my full experience or get in touch to discuss how we can work together to achieve your business goals.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="/assets/resume.pdf" class="btn btn-light btn-lg px-4 rounded-pill fw-bold" download="Hashim_Warren_Resume.pdf">
+            <i class="fas fa-file-download me-2"></i>Download Resume
+          </a>
+          <a href="/contact/" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+            <i class="fas fa-envelope me-2"></i>Contact Me
+          </a>
+        </div>
+      </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>

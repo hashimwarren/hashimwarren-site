@@ -1,46 +1,90 @@
 ---
-layout: base
-title: Contact
+layout: page.liquid
+title: Let's Connect
+subtitle: Have a question or want to discuss a potential project? I'd love to hear from you.
 permalink: /contact/
+includeCallToAction: false
 ---
 
-<section class="container py-5">
-  <h1 class="mb-4">Contact</h1>
-  <p class="mb-4">
-    Interested in working together or have a question? Fill out the form below or email me at
-    <span class="text-primary">
-      <a href="mailto:hashim&#64;example.com">hashim&#64;example.com</a>
-    </span>.
-  </p>
-  <form 
-    name="contact" 
-    method="POST" 
-    data-netlify="true" 
-    netlify-honeypot="bot-field"
-    class="row g-3"
-  >
-    <input type="hidden" name="form-name" value="contact">
-    <div class="d-none">
-      <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+<div class="row g-5">
+  <div class="col-lg-5">
+    ## Get in Touch
+    
+    Fill out the form or reach out directly through one of the contact methods listed below.
+    
+    <div class="d-flex align-items-center mb-4">
+      <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+        <i class="fas fa-envelope text-primary"></i>
+      </div>
+      <div>
+        <h5 class="fw-bold mb-1">Email</h5>
+        <p class="mb-0">hello@hashimwarren.com</p>
+      </div>
     </div>
-    <div class="col-md-6">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" id="name" name="name" required>
+    
+    <div class="d-flex align-items-center mb-4">
+      <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+        <i class="fas fa-phone text-primary"></i>
+      </div>
+      <div>
+        <h5 class="fw-bold mb-1">Phone</h5>
+        <p class="mb-0">(555) 123-4567</p>
+      </div>
     </div>
-    <div class="col-md-6">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" class="form-control" id="email" name="email" required>
+    
+    <div class="d-flex align-items-center mb-4">
+      <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+        <i class="fas fa-map-marker-alt text-primary"></i>
+      </div>
+      <div>
+        <h5 class="fw-bold mb-1">Location</h5>
+        <p class="mb-0">Raleigh-Durham, North Carolina</p>
+      </div>
     </div>
-    <div class="col-12">
-      <label for="subject" class="form-label">Subject</label>
-      <input type="text" class="form-control" id="subject" name="subject" required>
+    
+    <div class="mt-5">
+      <h5 class="fw-bold mb-3">Connect on Social</h5>
+      <div class="d-flex gap-2">
+        <a href="#" class="btn btn-dark rounded-circle" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="btn btn-dark rounded-circle" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="btn btn-dark rounded-circle" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
-    <div class="col-12">
-      <label for="message" class="form-label">Message</label>
-      <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-    </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </div>
-  </form>
-</section>
+  </div>
+  
+  <div class="col-lg-7">
+    <form name="contact" method="POST" data-netlify="true" class="bg-light p-4 p-lg-5 rounded-4">
+      <div class="mb-4">
+        <label for="name" class="form-label fw-bold">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      
+      <div class="mb-4">
+        <label for="email" class="form-label fw-bold">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      
+      <div class="mb-4">
+        <label for="subject" class="form-label fw-bold">Subject</label>
+        <input type="text" class="form-control" id="subject" name="subject">
+      </div>
+      
+      <div class="mb-4">
+        <label for="message" class="form-label fw-bold">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+      </div>
+      
+      <div data-netlify-recaptcha="true"></div>
+      
+      <div class="mt-4">
+        <button type="submit" class="btn btn-primary rounded-pill px-4">Send Message</button>
+      </div>
+    </form>
+  </div>
+</div>

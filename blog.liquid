@@ -5,51 +5,110 @@ permalink: /blog/
 description: "Read the latest insights on marketing strategy, digital trends, and community building from Hashim Warren."
 ---
 
-<div class="container mt-5">
-  <header class="text-center mb-5">
-    <h1 class="display-4">Blog</h1>
-    <p class="lead text-muted">Insights on marketing strategy, digital trends, and community building.</p>
-  </header>
+<section class="py-5 bg-dark text-white">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="display-4 fw-bold mb-4">Blog</h1>
+        <p class="lead fs-4 mb-0">Insights on marketing strategy, digital trends, and community building.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <div class="row g-4">
-    {%- if collections.posts and collections.posts.length > 0 -%}
-      {%- for post in collections.posts | reverse -%}
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm bg-white">
-               {% if post.data.featuredImage %}
-              <img src="{{ post.data.featuredImage }}" class="card-img-top card-img-top-fixed-height" alt="{{ post.data.imageAlt | default: 'Blog post image' }}">
-              {% else %}
-              <img src="https://placehold.co/600x400.png?text={{post.data.title | replace: ' ', '+'}}" class="card-img-top card-img-top-fixed-height" alt="Placeholder image for {{post.data.title}}">
-              {% endif %}
-              <div class="card-body text-center d-flex flex-column">
-                {% if post.data.date %}<p class="text-muted text-uppercase small mb-2">{{ post.date | date: "%B %d, %Y" }}</p>{% endif %}
-                <h5 class="card-title text-uppercase">{{ post.data.title }}</h5>
-                {% if post.data.summary %}<p class="card-text text-start">{{ post.data.summary }}</p>{% endif %}
-                <a href="{{ post.url | url }}" class="btn btn-sm btn-outline-secondary mt-auto">Read More</a>
+<!-- Blog Posts -->
+<section class="py-5">
+  <div class="container py-4">
+    {% if collections.posts and collections.posts.length > 0 %}
+      <!-- Featured Post (First/Latest Post) -->
+      {% assign featuredPost = collections.posts | reverse | first %}
+      <div class="row mb-5 pb-5 border-bottom">
+        <div class="col-lg-8 mx-auto">
+          <div class="card border-0 bg-transparent">
+            {% if featuredPost.data.featuredImage %}
+            <img src="{{ featuredPost.data.featuredImage }}" class="card-img-top rounded-4 shadow-sm" style="max-height: 400px; object-fit: cover;" alt="{{ featuredPost.data.imageAlt | default: 'Featured blog post image' }}">
+            {% else %}
+            <img src="https://placehold.co/1200x600.png?text={{featuredPost.data.title | replace: ' ', '+'}}" class="card-img-top rounded-4 shadow-sm" style="max-height: 400px; object-fit: cover;" alt="Placeholder image for {{featuredPost.data.title}}">
+            {% endif %}
+            <div class="card-body px-0 pt-4">
+              {% if featuredPost.data.date %}
+              <div class="d-flex align-items-center mb-3">
+                <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">{{ featuredPost.date | date: "%B %d, %Y" }}</span>
+                {% if featuredPost.data.tags %}
+                {% for tag in featuredPost.data.tags %}
+                <span class="badge bg-secondary bg-opacity-10 text-secondary ms-2 px-3 py-2 rounded-pill">{{ tag }}</span>
+                {% endfor %}
+                {% endif %}
               </div>
+              {% endif %}
+              <h3 class="fw-bold mb-3">{{ featuredPost.data.title }}</h3>
+              {% if featuredPost.data.summary %}
+              <p class="lead text-secondary mb-4">{{ featuredPost.data.summary }}</p>
+              {% endif %}
+              <a href="{{ featuredPost.url | url }}" class="btn btn-dark rounded-pill px-4">Read Full Post</a>
             </div>
           </div>
-        {%- endfor -%}
-      {%- else -%}
-        <div class="col-12">
-          <p class="text-center">No blog posts yet. Stay tuned!</p>
-          <!-- Placeholder cards if needed for layout testing when no posts exist -->
-          <div class="row g-4 visually-hidden">
-            {% for i in (1..3) %}
-            <div class="col-md-4">
-              <div class="card h-100 border-0 shadow-sm bg-white">
-                <img src="https://placehold.co/600x400.png?text=Blog+Post+{{i}}" class="card-img-top card-img-top-fixed-height" alt="Placeholder Blog Post Image {{i}}">
-                <div class="card-body text-center d-flex flex-column">
-                  <p class="text-muted text-uppercase small mb-2">MAY {{ 15 | minus: i }}, 2025</p>
-                  <h5 class="card-title text-uppercase">POST TITLE {{i}}</h5>
-                  <p class="card-text text-start">This is a summary of the blog post, providing a natural lead-in to the full content.</p>
-                  <a href="#" class="btn btn-sm btn-outline-secondary mt-auto">Read More</a>
+        </div>
+      </div>
+
+      <!-- Other Posts -->
+      <div class="row g-4">
+        {% assign otherPosts = collections.posts | reverse | slice: 1 %}
+        {% for post in otherPosts %}
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 bg-white rounded-4 shadow-sm overflow-hidden">
+            <div class="position-relative">
+              {% if post.data.featuredImage %}
+              <img src="{{ post.data.featuredImage }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="{{ post.data.imageAlt | default: 'Blog post image' }}">
+              {% else %}
+              <img src="https://placehold.co/800x400.png?text={{post.data.title | replace: ' ', '+'}}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Placeholder image for {{post.data.title}}">
+              {% endif %}
+            </div>
+            <div class="card-body p-4">
+              {% if post.data.date %}
+              <div class="d-flex align-items-center mb-3">
+                <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">{{ post.date | date: "%B %d, %Y" }}</span>
+              </div>
+              {% endif %}
+              <h5 class="fw-bold mb-3">{{ post.data.title }}</h5>
+              {% if post.data.summary %}
+              <p class="text-secondary">{{ post.data.summary }}</p>
+              {% endif %}
+              <a href="{{ post.url | url }}" class="btn btn-link text-dark p-0 text-decoration-none fw-bold">Read More →</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Newsletter Subscription -->
+      <div class="row mt-5 pt-5">
+        <div class="col-lg-8 mx-auto">
+          <div class="card border-0 bg-dark text-white rounded-4 p-4 p-md-5">
+            <div class="card-body text-center">
+              <h3 class="fw-bold mb-3">Never Miss an Update</h3>
+              <p class="mb-4">Get notified about new marketing insights, trends, and strategies.</p>
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <!-- Add your newsletter form here if you want one -->
+                  <div class="d-grid">
+                    <a href="/contact/" class="btn btn-light rounded-pill py-3">Contact Me</a>
+                  </div>
                 </div>
               </div>
             </div>
-            {% endfor %}
           </div>
         </div>
-    {%- endif -%}
+      </div>
+    {% else %}
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center py-5">
+          <div class="py-5">
+            <h3 class="fw-light mb-4">No blog posts yet. Stay tuned!</h3>
+            <p class="text-secondary">I'm working on some insightful content that will appear here soon.</p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
   </div>
-</div>
+</section>
