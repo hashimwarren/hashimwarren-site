@@ -77,8 +77,14 @@ layout: base.liquid
       <div class="col-lg-10">
         <h3 class="fw-bold mb-4">Read More</h3>
         <div class="row g-4">
-          {% assign otherPosts = collections.posts | reverse | where_exp: "post", "post.url != page.url" | limit:2 %}
+          {% assign otherPosts = collections.posts | reverse %}
+          {% assign filteredPosts = '' | split: '' %}
           {% for post in otherPosts %}
+            {% if post.url != page.url and filteredPosts.size < 2 %}
+              {% assign filteredPosts = filteredPosts | push: post %}
+            {% endif %}
+          {% endfor %}
+          {% for post in filteredPosts %}
           <div class="col-md-6">
             <div class="bg-white rounded-4 p-3 h-100 shadow-sm border-0">
               {% if post.data.featuredImage %}

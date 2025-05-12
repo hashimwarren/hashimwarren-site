@@ -19,7 +19,7 @@ description: "Read the latest insights on marketing strategy, digital trends, an
 <!-- Blog Posts -->
 <section class="py-5">
   <div class="container py-4">
-    {% if collections.posts and collections.posts.length > 0 %}
+    {% if collections.posts and collections.posts.size > 0 %}
       <!-- Featured Post (First/Latest Post) -->
       {% assign featuredPost = collections.posts | reverse | first %}
       <div class="row mb-5 pb-5 border-bottom">
@@ -53,16 +53,17 @@ description: "Read the latest insights on marketing strategy, digital trends, an
 
       <!-- Other Posts -->
       <div class="row g-4">
-        {% assign otherPosts = collections.posts | reverse | slice: 1 %}
-        {% for post in otherPosts %}
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 border-0 bg-white rounded-4 shadow-sm overflow-hidden">
-            <div class="position-relative">
-              {% if post.data.featuredImage %}
-              <img src="{{ post.data.featuredImage }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="{{ post.data.imageAlt | default: 'Blog post image' }}">
-              {% else %}
-              <img src="https://placehold.co/800x400.png?text={{post.data.title | replace: ' ', '+'}}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Placeholder image for {{post.data.title}}">
-              {% endif %}
+        {% assign allPosts = collections.posts %}
+        {% for post in allPosts %}
+          {% if forloop.index > 1 %}
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 bg-white rounded-4 shadow-sm overflow-hidden">
+              <div class="position-relative">
+                {% if post.data.featuredImage %}
+                <img src="{{ post.data.featuredImage }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="{{ post.data.imageAlt | default: 'Blog post image' }}">
+                {% else %}
+                <img src="https://placehold.co/800x400.png?text={{post.data.title | replace: ' ', '+'}}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Placeholder image for {{post.data.title}}">
+                {% endif %}
             </div>
             <div class="card-body p-4">
               {% if post.data.date %}
@@ -78,6 +79,7 @@ description: "Read the latest insights on marketing strategy, digital trends, an
             </div>
           </div>
         </div>
+          {% endif %}
         {% endfor %}
       </div>
 

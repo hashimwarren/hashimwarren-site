@@ -238,3 +238,33 @@ Solo developer — no external roles required
 3. May view detailed blog post or project
 4. Goes to About to learn more
 5. Proceeds to Contact to get in touch or download resume
+
+# Copilot Instructions for Eleventy Portfolio Site
+
+## Debugging and Q&A Process
+
+### Inspecting Generated HTML Output
+
+When troubleshooting template rendering issues or verifying content display:
+
+1. **Build the site**: Run `npx @11ty/eleventy` to generate the static output
+2. **Locate output files**: Navigate to the `_site` directory
+3. **Inspect HTML files**: Open the generated HTML files to check:
+   - Whether all expected content is being rendered
+   - If collections are populating correctly
+   - How templates are processing data
+   - If components are displaying as expected
+
+This approach bypasses the need to rely solely on browser inspection and helps identify issues in the template logic or data processing before the browser renders the content.
+
+Example commands:
+```bash
+# Build site
+npx @11ty/eleventy
+
+# View generated HTML (Linux/macOS)
+cat _site/blog/index.html | grep -A10 "post-card"
+
+# Check collection size
+grep -r "post-count" _site/
+```

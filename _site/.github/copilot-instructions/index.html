@@ -41,12 +41,33 @@
 </ul>
 <h2>CSS &amp; Design Principles</h2>
 <ul>
-<li>Avoid writing custom CSS unless absolutely necessary.</li>
-<li>Use Bootstrap’s utility classes and layout system as much as possible.</li>
-<li>Stick to Bootstrap's grid, spacing, and component patterns for layout and responsiveness.</li>
-<li>When styling is needed, prefer using Bootstrap’s utility classes (like <code>mb-3</code>, <code>text-center</code>, <code>bg-light</code>, etc.).</li>
-<li>Do not override Bootstrap styles with custom CSS unless there is no Bootstrap-native way to achieve the design.</li>
-<li>The goal is to have a consistent, professional look while minimizing long-term CSS maintenance.</li>
+<li>
+<p>Use Bootstrap 5 classes whenever possible.</p>
+</li>
+<li>
+<p>Prefer Liquid includes/shortcodes over custom CSS.</p>
+</li>
+<li>
+<p>Follow existing pattern files in /_includes and /_data.</p>
+</li>
+<li>
+<p>Avoid writing custom CSS unless absolutely necessary.</p>
+</li>
+<li>
+<p>Use Bootstrap’s utility classes and layout system as much as possible.</p>
+</li>
+<li>
+<p>Stick to Bootstrap's grid, spacing, and component patterns for layout and responsiveness.</p>
+</li>
+<li>
+<p>When styling is needed, prefer using Bootstrap’s utility classes (like <code>mb-3</code>, <code>text-center</code>, <code>bg-light</code>, etc.).</p>
+</li>
+<li>
+<p>Do not override Bootstrap styles with custom CSS unless there is no Bootstrap-native way to achieve the design.</p>
+</li>
+<li>
+<p>The goal is to have a consistent, professional look while minimizing long-term CSS maintenance.</p>
+</li>
 </ul>
 <h2>Visual Style Goals</h2>
 <ul>
@@ -225,3 +246,30 @@
 <li>Goes to About to learn more</li>
 <li>Proceeds to Contact to get in touch or download resume</li>
 </ol>
+<h1>Copilot Instructions for Eleventy Portfolio Site</h1>
+<h2>Debugging and Q&amp;A Process</h2>
+<h3>Inspecting Generated HTML Output</h3>
+<p>When troubleshooting template rendering issues or verifying content display:</p>
+<ol>
+<li><strong>Build the site</strong>: Run <code>npx @11ty/eleventy</code> to generate the static output</li>
+<li><strong>Locate output files</strong>: Navigate to the <code>_site</code> directory</li>
+<li><strong>Inspect HTML files</strong>: Open the generated HTML files to check:
+<ul>
+<li>Whether all expected content is being rendered</li>
+<li>If collections are populating correctly</li>
+<li>How templates are processing data</li>
+<li>If components are displaying as expected</li>
+</ul>
+</li>
+</ol>
+<p>This approach bypasses the need to rely solely on browser inspection and helps identify issues in the template logic or data processing before the browser renders the content.</p>
+<p>Example commands:</p>
+<pre><code class="language-bash"># Build site
+npx @11ty/eleventy
+
+# View generated HTML (Linux/macOS)
+cat _site/blog/index.html | grep -A10 &quot;post-card&quot;
+
+# Check collection size
+grep -r &quot;post-count&quot; _site/
+</code></pre>
