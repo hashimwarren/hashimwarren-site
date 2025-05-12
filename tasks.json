@@ -134,7 +134,12 @@
       "description": "Create a reusable card component for blog posts and portfolio projects with consistent styling.",
       "test": "Verify cards display correctly with various content lengths and image ratios.",
       "difficulty": 3,
-      "completed": false
+      "completed": true
+    },
+    {
+      "id": "4.5",
+      "name": "Build portfolio listing page",
+      "status": "in-progress"
     },
     {
       "id": "5.1",
@@ -218,6 +223,23 @@
           "id": "6.3.8",
           "description": "Review and adjust overall site spacing and layout for consistency.",
           "status": "complete"
+        }
+      ]
+    },
+    {
+      "id": "6.4",
+      "name": "Ensure mobile responsiveness across all pages",
+      "status": "in-progress",
+      "subtasks": [
+        {
+          "id": "6.4.1",
+          "name": "Test homepage on various screen sizes (mobile, tablet, desktop).",
+          "status": "complete"
+        },
+        {
+          "id": "6.4.2",
+          "name": "Test Portfolio page (`portfolio.liquid`) on various screen sizes.",
+          "status": "in-progress"
         }
       ]
     },
