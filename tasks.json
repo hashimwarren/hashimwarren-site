@@ -145,20 +145,28 @@
       "completed": true
     },
     {
-      "id": "6.1",
-      "title": "Style code blocks",
-      "description": "Implement syntax highlighting for code blocks in blog posts.",
-      "test": "Verify code blocks render with proper syntax highlighting.",
+      "id": "5.2",
+      "title": "Implement newsletter signup form",
+      "description": "Add a newsletter signup form to the site using Netlify Forms.",
+      "test": "Verify the form submits successfully and data is captured in Netlify.",
       "difficulty": 2,
-      "completed": false
+      "completed": true
     },
     {
-      "id": "6.2",
+      "id": "5.2",
+      "title": "Implement newsletter signup form",
+      "description": "Add a newsletter signup form to the site using Netlify Forms.",
+      "test": "Verify the form submits successfully and data is captured in Netlify.",
+      "difficulty": 2,
+      "completed": true
+    },
+    {
+      "id": "6.1",
       "title": "Build homepage layout",
-      "description": "Create the homepage with introduction, featured blog posts, and portfolio highlights.",
-      "test": "Verify homepage displays correctly on mobile and desktop.",
-      "difficulty": 4,
-      "completed": false
+      "description": "Design and implement the homepage layout with Bootstrap, including featured blog posts and portfolio highlights.",
+      "test": "Verify the homepage displays correctly with responsive design.",
+      "difficulty": 3,
+      "completed": true
     },
     {
       "id": "7.1",
