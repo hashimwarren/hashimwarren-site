@@ -1,0 +1,285 @@
+{
+  "tasks": [
+    {
+      "id": "1.1",
+      "title": "Create project directory",
+      "description": "Create a new directory for the Eleventy project and navigate into it.",
+      "test": "Verify the directory exists and you are inside it.",
+      "difficulty": 1,
+      "completed": true
+    },
+    {
+      "id": "1.2",
+      "title": "Initialize npm and create package.json",
+      "description": "Run 'npm init -y' to create a package.json file with default values.",
+      "test": "Check that package.json exists in the project directory.",
+      "difficulty": 1,
+      "completed": true
+    },
+    {
+      "id": "1.3",
+      "title": "Install Eleventy",
+      "description": "Install Eleventy as a dev dependency using 'npm install @11ty/eleventy --save-dev'.",
+      "test": "Check that Eleventy appears in package.json dependencies and node_modules is created.",
+      "difficulty": 1,
+      "completed": true
+    },
+    {
+      "id": "1.4",
+      "title": "Create a basic template file",
+      "description": "Create an index.html or index.md file with sample content in the project directory.",
+      "test": "Check that the file exists and contains sample content.",
+      "difficulty": 1,
+      "completed": true
+    },
+    {
+      "id": "1.5",
+      "title": "Run Eleventy build",
+      "description": "Run 'npx @11ty/eleventy' to build the site and generate the _site output folder.",
+      "test": "Check that the _site directory is created and contains the built files.",
+      "difficulty": 1,
+      "completed": true
+    },
+    {
+      "id": "1.6",
+      "title": "Start Eleventy development server",
+      "description": "Run 'npx @11ty/eleventy --serve' to start the local development server with hot reload.",
+      "test": "Visit http://localhost:8080/ and verify the site loads and updates on file changes.",
+      "difficulty": 1,
+      "completed": true
+    },
+    {
+      "id": "1.7",
+      "title": "Configure Liquid templating",
+      "description": "Set up Liquid as the templating engine for the project, ensuring proper file extensions and configurations.",
+      "test": "Create a test template with Liquid syntax and verify it renders correctly.",
+      "difficulty": 2,
+      "completed": true
+    },
+    {
+      "id": "1.8",
+      "title": "Install Bootstrap",
+      "description": "Integrate Bootstrap 5 into the project via CDN in the base layout file.",
+      "test": "Verify that Bootstrap styling applies to a test element.",
+      "difficulty": 1,
+      "completed": true
+    },
+    {
+      "id": "1.9",
+      "title": "Set up folder structure",
+      "description": "Create necessary directories for includes, layouts, pages, posts, assets, and CSS.",
+      "test": "Ensure all folders exist and Eleventy recognizes them in the build process.",
+      "difficulty": 1,
+      "completed": true
+    },
+    {
+      "id": "1.10",
+      "title": "Install Netlify CLI",
+      "description": "Install Netlify CLI as a dev dependency using 'npm install netlify-cli --save-dev'.",
+      "test": "Check that Netlify CLI appears in package.json dependencies and can be run with 'npx netlify --version'.",
+      "difficulty": 1,
+      "completed": true
+    },
+    {
+      "id": "2.1",
+      "title": "Create base layout",
+      "description": "Build a base layout template with header, footer, meta tags, and Bootstrap integration.",
+      "test": "Verify the layout renders with proper HTML structure and Bootstrap is loaded.",
+      "difficulty": 3,
+      "completed": true
+    },
+    {
+      "id": "2.2",
+      "title": "Style site theme",
+      "description": "Create a custom CSS file for theme-specific styling beyond Bootstrap defaults.",
+      "test": "Apply custom styles to a test page and verify they override Bootstrap defaults where intended.",
+      "difficulty": 3,
+      "completed": true
+    },
+    {
+      "id": "3.1",
+      "title": "Design site header",
+      "description": "Create a responsive header with site name (Hashim Warren) and navigation menu.",
+      "test": "Verify the header displays correctly and navigation menu works on mobile and desktop.",
+      "difficulty": 2,
+      "completed": true
+    },
+    {
+      "id": "3.2",
+      "title": "Add typography styles",
+      "description": "Implement consistent typography styles for headings, paragraphs, and other text elements.",
+      "test": "Check that typography renders consistently across different browsers.",
+      "difficulty": 2,
+      "completed": true
+    },
+    {
+      "id": "3.3",
+      "title": "Implement footer",
+      "description": "Create a responsive footer with navigation links, social media icons, and copyright information.",
+      "test": "Verify footer displays correctly and all links work.",
+      "difficulty": 2,
+      "completed": true
+    },
+    {
+      "id": "4.1",
+      "title": "Create button styles",
+      "description": "Design custom button styles for primary and secondary actions throughout the site.",
+      "test": "Check that buttons render consistently and have appropriate hover states.",
+      "difficulty": 2,
+      "completed": true
+    },
+    {
+      "id": "4.2",
+      "title": "Design card component",
+      "description": "Create a reusable card component for blog posts and portfolio projects with consistent styling.",
+      "test": "Verify cards display correctly with various content lengths and image ratios.",
+      "difficulty": 3,
+      "completed": false
+    },
+    {
+      "id": "5.1",
+      "title": "Implement contact form",
+      "description": "Create a contact form with name, email, subject, and message fields that will work with Netlify Forms.",
+      "test": "Submit test data and verify form validation works.",
+      "difficulty": 3,
+      "completed": false
+    },
+
+    {
+      "id": "6.1",
+      "title": "Style code blocks",
+      "description": "Implement syntax highlighting for code blocks in blog posts.",
+      "test": "Verify code blocks render with proper syntax highlighting.",
+      "difficulty": 2,
+      "completed": false
+    },
+    {
+      "id": "6.2",
+      "title": "Build homepage layout",
+      "description": "Create the homepage with introduction, featured blog posts, and portfolio highlights.",
+      "test": "Verify homepage displays correctly on mobile and desktop.",
+      "difficulty": 4,
+      "completed": false
+    },
+    {
+      "id": "7.1",
+      "title": "Create About page",
+      "description": "Build the About page with professional bio, background, and optional headshot.",
+      "test": "Verify the page renders correctly and all content is displayed properly.",
+      "difficulty": 2,
+      "completed": false
+    },
+    {
+      "id": "7.2",
+      "title": "Add resume download",
+      "description": "Add a downloadable PDF resume to the About page.",
+      "test": "Verify the resume downloads correctly when the link is clicked.",
+      "difficulty": 1,
+      "completed": false
+    },
+    {
+      "id": "8.1",
+      "title": "Create Posts page",
+      "description": "Build the blog listing page that displays all posts in reverse chronological order.",
+      "test": "Verify posts display correctly with titles, dates, and excerpts.",
+      "difficulty": 3,
+      "completed": false
+    },
+    {
+      "id": "8.2",
+      "title": "Create single post template",
+      "description": "Design a template for individual blog post pages with title, date, content, and optional tags.",
+      "test": "Verify single post pages render Markdown content correctly.",
+      "difficulty": 3,
+      "completed": false
+    },
+    {
+      "id": "9.1",
+      "title": "Create Projects page",
+      "description": "Build the portfolio page with project cards showing titles, clients, and brief descriptions.",
+      "test": "Verify projects display correctly in a responsive grid layout.",
+      "difficulty": 3,
+      "completed": false
+    },
+    {
+      "id": "9.2",
+      "title": "Create single project template",
+      "description": "Design a template for individual project pages with detailed information and results.",
+      "test": "Verify project details pages display correctly with all content and images.",
+      "difficulty": 3,
+      "completed": false
+    },
+    {
+      "id": "10.1",
+      "title": "Create Speaking page",
+      "description": "Build a page showcasing speaking engagements, talks, and workshops.",
+      "test": "Verify speaking engagements display correctly with dates, titles, and venues.",
+      "difficulty": 2,
+      "completed": false
+    },
+    {
+      "id": "10.2",
+      "title": "Create Contact page",
+      "description": "Build the contact page with form, email address, and social media links.",
+      "test": "Verify contact form displays correctly and all links work.",
+      "difficulty": 2,
+      "completed": false
+    },
+    {
+      "id": "11.1",
+      "title": "Configure Content Management",
+      "description": "Set up the data structure for blog posts and projects, either as Markdown files or JSON data.",
+      "test": "Verify that content can be added and displays correctly throughout the site.",
+      "difficulty": 4,
+      "completed": false
+    },
+    {
+      "id": "11.2",
+      "title": "Integrate form submission service",
+      "description": "Configure Netlify Forms for the contact and newsletter forms.",
+      "test": "Submit test data and verify it is received in the Netlify Forms dashboard.",
+      "difficulty": 3,
+      "completed": false
+    },
+    {
+      "id": "12.1",
+      "title": "Test responsive design",
+      "description": "Thoroughly test all pages across different screen sizes and devices.",
+      "test": "Verify all pages render correctly on mobile, tablet, and desktop views.",
+      "difficulty": 3,
+      "completed": false
+    },
+    {
+      "id": "12.2",
+      "title": "Add SEO and Performance optimizations",
+      "description": "Implement meta tags, optimize images, and ensure fast page load times.",
+      "test": "Run Lighthouse tests and verify scores for SEO and performance.",
+      "difficulty": 3,
+      "completed": false
+    },
+    {
+      "id": "12.3",
+      "title": "Ensure accessibility compliance",
+      "description": "Check all pages for accessibility issues and make necessary adjustments.",
+      "test": "Run accessibility audit and verify WCAG 2.1 AA compliance.",
+      "difficulty": 4,
+      "completed": false
+    },
+    {
+      "id": "13.1",
+      "title": "Deploy to Netlify",
+      "description": "Set up Netlify deployment from GitHub repository.",
+      "test": "Verify the site deploys correctly and is accessible at the Netlify URL.",
+      "difficulty": 2,
+      "completed": false
+    },
+    {
+      "id": "13.2",
+      "title": "Configure custom domain",
+      "description": "Set up a custom domain for the site through Netlify.",
+      "test": "Verify the site is accessible at the custom domain with HTTPS.",
+      "difficulty": 2,
+      "completed": false
+    }
+  ]
+}

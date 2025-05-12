@@ -1,0 +1,213 @@
+<h1>masterplan</h1>
+<h2>App Overview and Objectives</h2>
+<p>A personal portfolio and blog site to showcase marketing strategy work and attract full-time or consulting opportunities from local companies in North Carolina. The site is built using Eleventy (11ty), Liquid templating, and Bootstrap for fast, responsive design.</p>
+<h2>Target Audience</h2>
+<ul>
+<li>Business owners and hiring managers at local companies in North Carolina</li>
+<li>Potential clients seeking marketing strategy support</li>
+<li>Recruiters evaluating candidates for marketing roles</li>
+</ul>
+<h2>Core Features and Functionality</h2>
+<ul>
+<li>Homepage with a personal intro and highlights</li>
+<li>Portfolio page with project summaries and outcomes</li>
+<li>Blog page listing all posts</li>
+<li>Individual blog post pages (Markdown-powered)</li>
+<li>About page with professional background</li>
+<li>Contact page with form (Netlify Forms) and visible email</li>
+<li>Downloadable resume (PDF)</li>
+</ul>
+<h2>High-Level Technical Stack</h2>
+<ul>
+<li><strong>Static Site Generator</strong>: Eleventy (11ty)</li>
+<li><strong>Templating</strong>: Liquid</li>
+<li><strong>Styling</strong>: Bootstrap 5</li>
+<li><strong>Hosting</strong>: Netlify</li>
+<li><strong>Forms</strong>: Netlify Forms</li>
+<li><strong>CLI Tooling</strong>: Netlify CLI</li>
+<li><strong>Content Management</strong>: Markdown files (no CMS)</li>
+</ul>
+<h2>Conceptual Data Model</h2>
+<ul>
+<li><strong>Post</strong>: title, date, author, summary, body (Markdown)</li>
+<li><strong>Project</strong>: title, client, description, results, image (optional)</li>
+</ul>
+<h2>User Interface Design Principles</h2>
+<ul>
+<li>Clean, minimalist layout</li>
+<li>Bootstrap grid for responsiveness</li>
+<li>Clear CTAs (e.g., &quot;View Resume&quot;, &quot;Contact Me&quot;)</li>
+<li>Mobile-first design</li>
+</ul>
+<h2>Security Considerations</h2>
+<ul>
+<li>Spam protection on Netlify Forms (honeypot/captcha)</li>
+<li>Obfuscate email address to prevent scraping</li>
+<li>Serve over HTTPS (enabled by Netlify)</li>
+</ul>
+<h2>Development Phases or Milestones</h2>
+<ol>
+<li>Set up Eleventy project, Netlify CLI, and basic layout</li>
+<li>Build homepage, about, and contact pages</li>
+<li>Configure Netlify Forms</li>
+<li>Add blog structure and Markdown support</li>
+<li>Create portfolio page and project entries</li>
+<li>Polish design and responsive layout with Bootstrap</li>
+<li>Add downloadable resume</li>
+<li>Deploy to Netlify and test</li>
+</ol>
+<h2>Potential Challenges and Solutions</h2>
+<ul>
+<li><strong>Form spam</strong>: Use Netlify’s built-in spam protection</li>
+<li><strong>Email scraping</strong>: Use JS or HTML encoding</li>
+<li><strong>Bootstrap clashes</strong>: Keep custom styles scoped</li>
+</ul>
+<h2>Future Expansion Possibilities</h2>
+<ul>
+<li>Add client testimonials</li>
+<li>Integrate analytics (e.g., Plausible, Fathom)</li>
+<li>Add RSS feed for blog</li>
+<li>Enable search functionality</li>
+<li>Set up Netlify CMS if non-dev content editing is needed</li>
+</ul>
+<h1>implementation-plan</h1>
+<h2>Step-by-Step Action Plan</h2>
+<h3>Phase 1 – Project Setup</h3>
+<ul>
+<li>Initialize Eleventy project using cli</li>
+<li>Configure Liquid as the templating engine</li>
+<li>Install Bootstrap via CDN or npm</li>
+<li>Install Netlify CLI</li>
+<li>Authenticate Netlify CLI</li>
+<li>Set up folder structure (includes, layouts, content)</li>
+</ul>
+<h3>Phase 2 – Static Pages</h3>
+<ul>
+<li>Create homepage layout and content</li>
+<li>Build about page with biography and background</li>
+<li>Design contact page with Netlify Forms integration</li>
+<li>Add PDF resume to static assets folder</li>
+</ul>
+<h3>Phase 3 – Blog System</h3>
+<ul>
+<li>Configure blog collection in Eleventy</li>
+<li>Create Markdown template for blog posts</li>
+<li>Build blog listing page and pagination (if needed)</li>
+<li>Add sample blog posts</li>
+</ul>
+<h3>Phase 4 – Portfolio Section</h3>
+<ul>
+<li>Create project data (Markdown or JSON)</li>
+<li>Build portfolio listing page</li>
+<li>Design individual project detail pages (optional)</li>
+</ul>
+<h3>Phase 5 – Design and Polish</h3>
+<ul>
+<li>Apply Bootstrap styles for layout, spacing, typography</li>
+<li>Ensure mobile responsiveness across all pages</li>
+<li>Optimize images and assets</li>
+</ul>
+<h3>Phase 6 – Deployment</h3>
+<ul>
+<li>Connect to GitHub repo (if using)</li>
+<li>Deploy to Netlify</li>
+<li>Test form submission and email</li>
+<li>Check site performance and SEO basics</li>
+</ul>
+<h2>Timeline/Phases</h2>
+<ul>
+<li><strong>Week 1</strong>: Setup, static pages, resume, basic styling</li>
+<li><strong>Week 2</strong>: Blog and portfolio system</li>
+<li><strong>Week 3</strong>: Final polish, testing, deployment</li>
+</ul>
+<h2>Team Setup</h2>
+<p>Solo developer — no external roles required</p>
+<h2>Optional Enhancements (Post-MVP)</h2>
+<ul>
+<li>Add client testimonials section</li>
+<li>Integrate basic analytics (e.g., Plausible)</li>
+<li>Include a blog RSS feed</li>
+<li>Add light/dark mode toggle</li>
+<li>Configure Netlify CMS (if needed later)</li>
+</ul>
+<h1>design-guidelines</h1>
+<h2>Visual Style</h2>
+<ul>
+<li><strong>Framework</strong>: Bootstrap 5</li>
+<li><strong>Colors</strong>: Clean and professional palette — consider blues, grays, and soft neutrals</li>
+<li><strong>Fonts</strong>: Use a readable sans-serif (e.g., Inter, Roboto, or Bootstrap default)</li>
+<li><strong>Spacing</strong>: Generous padding/margins to reduce clutter</li>
+</ul>
+<h2>Page Layout Principles</h2>
+<ul>
+<li>Consistent header and footer on all pages</li>
+<li>Mobile-first grid layout using Bootstrap</li>
+<li>Portfolio and blog cards with hover states</li>
+<li>Clear visual hierarchy: headlines, subheads, body text</li>
+</ul>
+<h2>Accessibility</h2>
+<ul>
+<li>Ensure good contrast between text and background</li>
+<li>Use semantic HTML tags (header, main, article, etc.)</li>
+<li>Add alt tags for all images</li>
+<li>Make form elements keyboard-navigable</li>
+</ul>
+<h2>Mobile-First Notes</h2>
+<ul>
+<li>Prioritize responsive design from the start</li>
+<li>Use Bootstrap’s grid and utility classes for adaptability</li>
+<li>Avoid fixed-width elements — let layout flex naturally</li>
+</ul>
+<h2>Brand Tone and Voice</h2>
+<ul>
+<li><strong>Tone</strong>: Friendly, competent, and focused</li>
+<li><strong>Voice</strong>: Confident and conversational (but not too casual)</li>
+<li>Include local touches (e.g., references to North Carolina) to build regional connection</li>
+</ul>
+<h1>app-flow-pages-and-roles</h1>
+<h2>Core Pages</h2>
+<h3>1. Homepage</h3>
+<ul>
+<li>Intro headline and brief about section</li>
+<li>Featured blog posts and portfolio highlights</li>
+<li>Clear call-to-actions (view portfolio, download resume, contact)</li>
+</ul>
+<h3>2. Portfolio Page</h3>
+<ul>
+<li>List of marketing strategy projects (card layout)</li>
+<li>Each card links to a detailed project view or expanded modal</li>
+</ul>
+<h3>3. Blog Page</h3>
+<ul>
+<li>Reverse chronological list of blog posts</li>
+<li>Each links to its individual Markdown post</li>
+</ul>
+<h3>4. Individual Blog Post Page</h3>
+<ul>
+<li>Title, date, content rendered from Markdown</li>
+<li>Optional tags or categories</li>
+</ul>
+<h3>5. About Page</h3>
+<ul>
+<li>Short biography, professional background, and headshot (if desired)</li>
+<li>Link to resume download</li>
+</ul>
+<h3>6. Contact Page</h3>
+<ul>
+<li>Contact form (Netlify Forms)</li>
+<li>Visible email address</li>
+<li>Optionally include social/contact links (LinkedIn, etc.)</li>
+</ul>
+<h2>User Roles</h2>
+<ul>
+<li><strong>Site Owner</strong> (you): Full control over content via markdown</li>
+<li><strong>Visitors</strong>: Public, read-only access to all pages</li>
+</ul>
+<h2>User Flow</h2>
+<ol>
+<li>Visitor lands on Homepage</li>
+<li>Can explore Portfolio or Blog</li>
+<li>May view detailed blog post or project</li>
+<li>Goes to About to learn more</li>
+<li>Proceeds to Contact to get in touch or download resume</li>
+</ol>

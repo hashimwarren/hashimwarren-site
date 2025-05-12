@@ -1,0 +1,112 @@
+/* Custom styles for Hashim Warren's portfolio site */
+
+body {
+  font-family: var(
+    --bs-font-sans-serif
+  ); /* Using Bootstrap's default sans-serif */
+  color: var(--bs-body-color);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500; /* Slightly bolder than default for Bootstrap */
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(
+    --bs-heading-color,
+    inherit
+  ); /* Respect Bootstrap's heading color or inherit */
+}
+
+h1 {
+  font-size: 2.5rem; /* Bootstrap's h1 is 2.5rem by default */
+}
+
+h2 {
+  font-size: 2rem; /* Bootstrap's h2 is 2rem by default */
+}
+
+h3 {
+  font-size: 1.75rem; /* Bootstrap's h3 is 1.75rem by default */
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: var(--bs-link-color);
+}
+
+a:hover {
+  color: var(--bs-link-hover-color);
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #0d6efd; /* Bootstrap primary blue */
+  border-color: #0d6efd;
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Bootstrap secondary gray */
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: #5c636a;
+  border-color: #565e64;
+  color: #fff;
+}
+
+/* Card Component Styles */
+.card {
+    border: 1px solid #dee2e6; /* Bootstrap default card border color */
+    border-radius: 0.25rem; /* Bootstrap default card border radius */
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow for depth */
+}
+
+.card-img-top {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-body {
+    padding: 1.25rem; /* Bootstrap default card body padding */
+}
+
+.card-title {
+    margin-bottom: 0.75rem; /* Bootstrap default card title margin */
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+.card-link + .card-link {
+    margin-left: 1.25rem;
+}
+
+/* Add more specific styles as needed based on design guidelines */
