@@ -82,31 +82,31 @@ a:hover {
 
 /* Card Component Styles */
 .card {
-    border: 1px solid #dee2e6; /* Bootstrap default card border color */
-    border-radius: 0.25rem; /* Bootstrap default card border radius */
-    margin-bottom: 1.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow for depth */
+  border: 1px solid #dee2e6; /* Bootstrap default card border color */
+  border-radius: 0.25rem; /* Bootstrap default card border radius */
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow for depth */
 }
 
 .card-img-top {
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
 }
 
 .card-body {
-    padding: 1.25rem; /* Bootstrap default card body padding */
+  padding: 1.25rem; /* Bootstrap default card body padding */
 }
 
 .card-title {
-    margin-bottom: 0.75rem; /* Bootstrap default card title margin */
+  margin-bottom: 0.75rem; /* Bootstrap default card title margin */
 }
 
 .card-text:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .card-link + .card-link {
-    margin-left: 1.25rem;
+  margin-left: 1.25rem;
 }
 
 /* Add more specific styles as needed based on design guidelines */

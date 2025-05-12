@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Eleventy build output
+_site/
+
+# Logs
+*.log
+
+# Environment files (if any)
+.env*
+.env
+
+# IDE/editor directories
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Caches
+.cache/
+
+# Optional: If you have build artifacts or temporary files
+/dist/
+# Local Netlify folder
+.netlify

@@ -142,9 +142,8 @@
       "description": "Create a contact form with name, email, subject, and message fields that will work with Netlify Forms.",
       "test": "Submit test data and verify form validation works.",
       "difficulty": 3,
-      "completed": false
+      "completed": true
     },
-
     {
       "id": "6.1",
       "title": "Style code blocks",
