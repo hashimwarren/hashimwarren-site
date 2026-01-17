@@ -13,6 +13,6 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "netlify-cli": "^12.14.0"
+    "netlify-cli": "^23.13.4"
   }
 }
