@@ -3,8 +3,10 @@ Thumbs.db
 
 .next/
 .playwright-mcp/
+.chrome-og-profile/
 node_modules/
 .vercel/
 
 *.log
 *.png
+!og-image.png
