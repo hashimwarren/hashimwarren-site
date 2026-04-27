@@ -1,0 +1,151 @@
+:root {
+  --paper: oklch(0.985 0.006 84);
+  --ink: oklch(0.17 0.01 78);
+  --muted: oklch(0.42 0.014 78);
+  --line: oklch(0.84 0.01 84);
+  --accent: oklch(0.33 0.08 152);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+a {
+  color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+p {
+  margin: 0 0 1.35rem;
+}
+
+h1,
+h2 {
+  margin: 0 0 1rem;
+  line-height: 1.12;
+}
+
+h1 {
+  font-size: clamp(2.15rem, 7vw, 3.6rem);
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+.topbar,
+.homepage {
+  width: min(100% - 2rem, 43rem);
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 3.8rem 0 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.wordmark {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  color: var(--muted);
+}
+
+.nav-links a {
+  text-decoration: none;
+}
+
+.homepage {
+  padding: 2.4rem 0 5rem;
+}
+
+.hero {
+  margin-bottom: 3.8rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.hero-actions,
+.topbar,
+.experience-list {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.section p {
+  color: var(--muted);
+}
+
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.22rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 17px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+
+  .homepage {
+    padding-top: 1.4rem;
+  }
+}
